@@ -19,7 +19,7 @@ variable "config_file" {
 }
 
 locals {
-  config          = yamldecode(file("${path.module}/../../../config/${var.config_file}.yaml"))
+  config          = yamldecode(file("./config/${var.config_file}.yaml"))
   apim_api        = local.config.apim_api
   apim_api_policy = local.config.apim_api_policy
   operations      = local.config.operations
